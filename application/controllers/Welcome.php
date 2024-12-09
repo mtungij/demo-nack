@@ -826,7 +826,7 @@ public function send_reminder_auto_pending($comp_id,$customer_id,$loan_id){
 	$last_name = $data_sms->l_name;
 
 	$restoration = $loan_restoration->restration;
-	$massage = 'Ndugu Mteja Rejesho lako la leo Halijapokelewa '.' '. $comp_name .' '. 'Epuka Kuchajiwa  Faini Ya Kulaza Rejesho kwa Kutokulipa kwa Wakati Ahsante.';
+	$massage = ' Mteja Rejesho lako la leo Halijapokelewa '.' '. $comp_name .' '. 'Epuka Kuchajiwa  Faini Ya Kulaza Rejesho kwa Kutokulipa kwa Wakati Ahsante.';
 	//    echo "<pre>";
 	// print_r($phone);
 	//      exit();
