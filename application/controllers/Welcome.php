@@ -384,13 +384,13 @@ class Welcome extends CI_Controller {
       	  //  }
 
       	//   $today = date("Y-m-d 23:59");
-		// $today = date("Y-m-d", strtotime("+1 day"));
-      	  $today = date("Y-m-d");
+		$today = date("Y-m-d", strtotime("+1 day"));
+      	//   $today = date("Y-m-d");
       	  @$loans = $this->queries->get_sum_depostLoan($loan_id);
       	  $depost_data = @$loans->depos;
       	  $rem = $totalloan - $depost_data;
-      	      // print_r($depost_data);
-      	      //  exit();
+      	    //   print_r($depost_data);
+      	    //    exit();
       	  //loan penart by samwel
       	   $penart_data = $loan_data->penat_status;
       	   $penart_status = $penart_data;
@@ -432,7 +432,7 @@ class Welcome extends CI_Controller {
                   	$this->update_loastatus_outstand($loan_id);
                   	$this->update_customer_status_out($customer_id);
                   	$this->update_recovery($loan_id);
-                    }elseif($depost_data > $totalloan){
+                    }elseif($depost_data === $totalloan){
                     $this->update_loastatus($loan_id);
                     $this->insert_loan_kumaliza($comp_id,$blanch_id,$customer_id,$loan_id,$kumaliza,$group_id);
                     //$this->update_shedure_paid($loan_id);
